@@ -19,7 +19,7 @@ officially supported tool specifically designed for that purpose such as any of 
 - [AWS Console](https://aws.amazon.com/console)
 - [AWS CLI](https://aws.amazon.com/cli/)
 - [AWS Shell](https://github.com/awslabs/aws-shell)
-- [WS SDK for Python (boto3)](https://aws.amazon.com/sdk-for-python/)
+- [AWS SDK for Python (boto3)](https://aws.amazon.com/sdk-for-python/)
 
 # Main Features
 - Expressive and intuitive syntax
