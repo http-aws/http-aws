@@ -29,7 +29,10 @@ setup(
     author=httpaws.__author__,
     author_email='todd.leonhardt@gmail.com',
     license=httpaws.__licence__,
+    platforms=['any'],
     packages=find_packages(),
+    keywords='http cli aws',
+    python_requires='>=2.7',
     entry_points={
         'console_scripts': [
             'httpaws = httpaws.__main__:main',
