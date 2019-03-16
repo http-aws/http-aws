@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# JetBrains IDEs like PyCharm or IntelliJ
+.idea
+
