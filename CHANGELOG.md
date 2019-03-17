@@ -5,7 +5,7 @@ This document records all notable changes to [httpAWS](https://github.com/http-a
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## `0.0.2`  (unreleased)
+## `0.0.2` (2019-Mar-17)
 
 * Improvements to README and setup.py
 * Added CHANGELOG.md, CONTTRIBUTING.md, CODE_OF_CONDUCT.md
