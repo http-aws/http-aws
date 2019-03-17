@@ -15,13 +15,15 @@ to AWS services.  It is effectively a command-line programmatic replacement for 
 AWS services.
 
 .. warning::
+
     This tool is intended for development and educational purposes.  It is NOT intended for robust and reliable
     administration of AWS services.  For interaction with production AWS services, it is highly recommended that you use
     an officially supported tool specifically designed for that purpose such as any of the following:
-    - `AWS Console <https://aws.amazon.com/console>`_
-    - `AWS CLI <https://aws.amazon.com/cli>`_
-    - `AWS Shell <https://github.com/awslabs/aws-shell>`_
-    - `AWS SDK for Python (boto3) <https://aws.amazon.com/sdk-for-python>`_
+
+    * `AWS Console <https://aws.amazon.com/console>`_
+    * `AWS CLI <https://aws.amazon.com/cli>`_
+    * `AWS Shell <https://github.com/awslabs/aws-shell>`_
+    * `AWS SDK for Python (boto3) <https://aws.amazon.com/sdk-for-python>`_
 
 .. class:: no-web no-pdf
 
@@ -99,6 +101,7 @@ Synopsis:
 See also ``httpaws -h`` for detailed help:
 
 .. code-block:: bash
+
     $ httpaws -h
     usage: httpaws [-h] [-r REGION] [-s SERVICE] [-e ENDPOINT] [-c CREDS]
                    [-v VERSION] [-p] [-w]
