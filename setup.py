@@ -16,7 +16,7 @@ install_requires = [
 
 
 def long_description():
-    with codecs.open('README.rst', encoding='utf8') as f:
+    with codecs.open('README.md', encoding='utf8') as f:
         return f.read()
 
 
