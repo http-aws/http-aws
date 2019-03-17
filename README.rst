@@ -14,7 +14,7 @@ to AWS services.  It is effectively a command-line programmatic replacement for 
 `Postman <https://www.getpostman.com>`_ and was inspired by tools like `HTTPie <https://httpie.org>`_ but is specific to
 AWS services.
 
-.. warning::
+.. note::
 
     This tool is intended for development and educational purposes.  It is NOT intended for robust and reliable
     administration of AWS services.  For interaction with production AWS services, it is highly recommended that you use
