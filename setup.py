@@ -25,6 +25,7 @@ setup(
     version=httpaws.__version__,
     description=httpaws.__doc__.strip(),
     long_description=long_description(),
+    long_description_content_type='text/markdown',
     url='https://github.com/http-aws/http-aws',
     download_url='https://github.com/http-aws/http-aws',
     author=httpaws.__author__,

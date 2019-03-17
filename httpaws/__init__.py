@@ -2,7 +2,7 @@
 httpAWS - a CLI, cURL-like tool for AWS services.
 
 """
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 __author__ = 'Todd Leonhardt'
 __licence__ = 'Apache 2.0'
 
