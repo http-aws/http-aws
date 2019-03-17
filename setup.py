@@ -8,6 +8,7 @@ import httpaws
 install_requires = [
     'requests>=2.19.0',
     'aws-requests-auth>=0.4.0',
+    'botocore>=1.12.0',
     'colorama>=0.3.0',
     'pygments>=2.3.0',
     'lxml>=4.0.0',
@@ -15,7 +16,7 @@ install_requires = [
 
 
 def long_description():
-    with codecs.open('README.md', encoding='utf8') as f:
+    with codecs.open('README.rst', encoding='utf8') as f:
         return f.read()
 
 

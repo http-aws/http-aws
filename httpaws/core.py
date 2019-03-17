@@ -1,11 +1,10 @@
 # coding=utf-8
 """This module provides the main functionality of httpAWS.
 Invocation flow:
-  1. Read, validate and process the input (args, `stdin`).
-  2. Create and send a request.
-  3. Stream, and possibly process and format, the parts
-     of the request-response exchange selected by output options.
-  4. Simultaneously write to `stdout`
+  1. Read, validate, and process the input (command line args, environment vars, and AWS config files)
+  2. Create and send a request
+  3. Process and format the response
+  4. Write to `stdout`
   5. Exit.
 """
 import argparse
@@ -19,7 +18,7 @@ from pygments.lexers import guess_lexer
 from pygments.formatters import TerminalFormatter
 import requests
 
-from httpaws import ExitStatus
+from httpaws import ExitStatus, __version__ as version
 
 
 def perror(msg, color=Fore.LIGHTRED_EX):
@@ -104,20 +103,21 @@ def main(argv=None):
     """Run when invoked from the command-line."""
     colorama.init(autoreset=True)
     # Create an arparse argument parser for parsing command-line arguments
-    desc = 'A command line HTTP client for AWS services with an intuitive UI, XML support and syntax highlighting.'
+    prog = 'httpaws'
+    desc = '{} v{}: A CLI HTTP client for AWS services with syntax highlighting'.format(prog, version)
     epilog = 'See the AWS Documentation for API references for each service:  https://docs.aws.amazon.com'
-    parser = argparse.ArgumentParser(description=desc, epilog=epilog, prog='http_aws')
-    parser.add_argument('-r', '--region', help='The region to use. Overrides config/env settings.')
+    parser = argparse.ArgumentParser(description=desc, epilog=epilog, prog=prog)
+    parser.add_argument('-r', '--region', help='AWS region. Overrides config/env - e.g. us-east-1')
     parser.add_argument('-s', '--service', help='AWS service - e.g. ec2, s3, etc.', default='ec2')
     parser.add_argument('-e', '--endpoint',
-                        help="Override command's default URL with the given URL - e.g. ec2.us-east-1.amazonaws.com")
+                        help="override command's default URL with the given URL - e.g. ec2.us-east-1.amazonaws.com")
     parser.add_argument('-c', '--creds',
-                        help="Override AWS Access Key Id and AWS Secret Access Key - i.e. <Access_Key>:<Secret_Key>")
+                        help="override AWS Access Key Id and AWS Secret Access Key - i.e. <Access_Key>:<Secret_Key>")
     parser.add_argument('-v', '--version', help='API version to use for the service', default='2015-10-01')
-    parser.add_argument('-p', '--paginate', action='store_true', help='Paginate long output')
+    parser.add_argument('-p', '--paginate', action='store_true', help='paginate long output')
     parser.add_argument('-w', '--wrap', action='store_true',
-                        help='Wrap long lines in paginated output instead of chopping them off')
-    parser.add_argument('api', help='Name of the API to call - e.g. "DescribeVpcs" (for ec2 service)')
+                        help='wrap long lines in paginated output (instead of chop)')
+    parser.add_argument('api', help='name of the API to call - e.g. "DescribeVpcs"')
     args = parser.parse_args(argv)
 
     # --- Configure AWS basics ---
