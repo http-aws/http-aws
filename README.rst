@@ -14,17 +14,6 @@ to AWS services.  It is effectively a command-line programmatic replacement for 
 `Postman <https://www.getpostman.com>`_ and was inspired by tools like `HTTPie <https://httpie.org>`_ but is specific to
 AWS services.
 
-.. note::
-
-    This tool is intended for development and educational purposes.  It is NOT intended for robust and reliable
-    administration of AWS services.  For interaction with production AWS services, it is highly recommended that you use
-    an officially supported tool specifically designed for that purpose such as any of the following:
-
-    * `AWS Console <https://aws.amazon.com/console>`_
-    * `AWS CLI <https://aws.amazon.com/cli>`_
-    * `AWS Shell <https://github.com/awslabs/aws-shell>`_
-    * `AWS SDK for Python (boto3) <https://aws.amazon.com/sdk-for-python>`_
-
 .. class:: no-web no-pdf
 
 |pypi|
@@ -249,7 +238,6 @@ Configurable options
 The default AWS region is read from the ``config`` file, while the default AWS access and secret keys are read from the
 ``credentials`` file.
 
-
 Best practices
 --------------
 
@@ -294,12 +282,21 @@ Under the hood, httpAWS uses these amazing libraries:
 
 Alternatives
 ~~~~~~~~~~~~
-* `AWS Console <https://aws.amazon.com/console>`_ - official AWS web-based console
-* `AWS CLI <https://aws.amazon.com/cli>`_ - official AWS command-line utility
-* `AWS Shell <https://github.com/awslabs/aws-shell>`_ - official AWS interative CLI (experimental)
-* `AWS SDK for Python (boto3) <https://aws.amazon.com/sdk-for-python>`_ - official AWS Python SDK
+
 * `HTTPie <https://httpie.org>`_ — an awesome and much more feature rich HTTP CLI that isn't specific to AWS
 * `curl <https://curl.haxx.se>`_ — a "Swiss army knife" command line tool and library for transferring data with URLs
+
+Warning
+~~~~~~~
+
+This tool is intended for development and educational purposes.  It is NOT intended for robust and reliable
+administration of AWS services.  For interaction with production AWS services, it is highly recommended that you use
+an officially supported tool specifically designed for that purpose such as any of the following:
+
+* `AWS Console <https://aws.amazon.com/console>`_
+* `AWS CLI <https://aws.amazon.com/cli>`_
+* `AWS Shell <https://github.com/awslabs/aws-shell>`_
+* `AWS SDK for Python (boto3) <https://aws.amazon.com/sdk-for-python>`_
 
 Contributing
 ------------
@@ -320,7 +317,6 @@ Authors
 -------
 
 `Todd Leonhardt`_ created httpaws and `these fine people`_ have contributed.
-
 
 .. _pip: https://pip.pypa.io/en/stable/installing/
 .. _Github API: http://developer.github.com/v3/issues/comments/#create-a-comment
