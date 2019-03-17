@@ -4,6 +4,9 @@
 This document records all notable changes to [httpAWS](https://github.com/http-aws/http-aws).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.5 (unreleased)
+* Added MANIFEST.in
+
 ## 0.0.4 (2019-Mar-17)
 * Set PyPI long description content type to Markdown
 

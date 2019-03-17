@@ -1,0 +1,4 @@
+include README.md CHANGELOG.md CONTRIBUTING.md LICENSE
+
+global-exclude __pycache__
+global-exclude *.py[co]
